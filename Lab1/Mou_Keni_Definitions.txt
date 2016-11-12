@@ -1,0 +1,7 @@
+man : a quick reference manual
+pwd : get current directory
+find : find files
+mv : rename and move files
+g++ : same as gcc, a C and C++ compiler
+
+

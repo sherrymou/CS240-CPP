@@ -1,0 +1,43 @@
+First run:
+=================================================
+in-order insertion: 
+Each find() call on a 100000 node BST takes 0.0003233 seconds.
+random insertion: 
+Each find() call on a 100000 node BST takes 2.23e-05 seconds.
+in-order insertion: 
+Each find() call on a 75000 node BST takes 0.0002494 seconds.
+random insertion: 
+Each find() call on a 75000 node BST takes 2.31e-05 seconds.
+in-order insertion: 
+Each find() call on a 50000 node BST takes 0.000181 seconds.
+random insertion: 
+Each find() call on a 50000 node BST takes 2.29e-05 seconds.
+
+Second run:
+================================================
+in-order insertion: 
+Each find() call on a 100000 node BST takes 0.0003233 seconds.
+random insertion: 
+Each find() call on a 100000 node BST takes 2.23e-05 seconds.
+in-order insertion: 
+Each find() call on a 75000 node BST takes 0.0002506 seconds.
+random insertion: 
+Each find() call on a 75000 node BST takes 2.29e-05 seconds.
+in-order insertion: 
+Each find() call on a 50000 node BST takes 0.0001777 seconds.
+random insertion: 
+Each find() call on a 50000 node BST takes 2.28e-05 seconds.
+
+
+Facts:
+The ranking of time taken is:
+in-order insertion 100,000 > in-order insertion 75,000 > in-order insertion 50,000 > each random insertion
+each find() on random insertion tree are similar and not vary too much.
+
+
+Explaination:
+The in-order insertion is the worst case of a binary search tree.
+So for each test with same nodes, the in-order insertion will always take more time than random insertion. (because it has more levels)
+After removing nodes from the tree, the tree becomes less long (i.e. with smaller height). So for each test, the less nodes in the tree will result in less time taken to complete find().
+However, since random insertion won't influence the height of the tree too much, especially when there are millions nodes, the lower level of the tree can store much more nodes. So the time to complete a find() call won't vary too much whether there are 100,000 or 50,000 nodes. Depends on the situation less node will even take a little bit longer to find. 
+
